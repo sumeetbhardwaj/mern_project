@@ -11,7 +11,9 @@ const swaggerSpec = require('./swagger');
 const app = express();
 const port = process.env.PORT || 8080
 
-app.use(cors()); 
+app.use(cors( {
+    origin: `${process.env.FRONTEND_URL}`,
+  })); 
 
 app.use(bodyParser.json());
 app.use(express.json());
