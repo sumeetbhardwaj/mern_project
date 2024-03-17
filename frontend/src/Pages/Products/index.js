@@ -122,7 +122,11 @@ const Products = () => {
 if(!isLoaging){
   return (
     <Layout>
-      <div>Loading...</div>
+        <div className='container min_hieght'>
+          <div className="bd-example">
+              <div>Loading...</div>
+          </div>
+        </div>
     </Layout>)
 }
 
