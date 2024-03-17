@@ -16,12 +16,14 @@ const Products = () => {
  const [sigleProduct, setSingleProduct] = useState("")
  const [message, setMessage] = useState("")
  const [editModalShow, setEditModalShow] = useState(false)
+ const [isLoaging, setLoading] = useState(false)
 
  // get all products
   useEffect(() => {
     const getproductsData = async() =>{
       const response = await ProductApi();
       if(response.statusCode === 200){
+        setLoading(true)
         setProducts(response)
       } else if(response?.response?.data?.statusCode === 400){
         setProducts(response?.response?.data);
@@ -117,7 +119,12 @@ const Products = () => {
 
     } 
   }
-
+if(!isLoaging){
+  return (
+    <Layout>
+      <div>Loading...</div>
+    </Layout>)
+}
 
   return (
     <Layout>
