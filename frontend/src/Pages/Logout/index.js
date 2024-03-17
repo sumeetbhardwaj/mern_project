@@ -15,7 +15,7 @@ const Logout = () => {
     const logoutApi = async() => {
       try {    
           const getToken = storage.getToken();
-          const response = await axios.get(`${API_URL}/logout`,
+          const response = await axios.get(`${process.env.REACT_APP_API_URL}/logout`,
               {
                   headers: {
                       'Authorization': `Bearer ${getToken}`

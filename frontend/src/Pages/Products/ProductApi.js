@@ -6,7 +6,7 @@ import storage from "../../utils/storage";
 const ProductApi = async() => {
     try {    
         const getToken = storage.getToken();
-        const response = await axios.get(`${API_URL}/get_products`,
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/get_products`,
             {
                 headers: {
                     'Authorization': `Bearer ${getToken}`

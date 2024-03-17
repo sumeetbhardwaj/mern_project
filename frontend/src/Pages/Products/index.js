@@ -47,7 +47,7 @@ const Products = () => {
     const handleDelete = async(productId) => {
       try {    
         const getToken = storage.getToken();
-        const response = await axios.delete(`${API_URL}/delete_product/${productId}`,
+        const response = await axios.delete(`${process.env.REACT_APP_API_URL}/delete_product/${productId}`,
             {
                 headers: {
                     'Authorization': `Bearer ${getToken}`

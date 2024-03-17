@@ -6,7 +6,7 @@ const EditProductApi = async(values) => {
 
     try {    
         const getToken = storage.getToken();
-        const response = await axios.put(`${API_URL}/update_product/${values._id}`,values,
+        const response = await axios.put(`${process.env.REACT_APP_API_URL}/update_product/${values._id}`,values,
             {
                 headers: {
                     'Authorization': `Bearer ${getToken}`
