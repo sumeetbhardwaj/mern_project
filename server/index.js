@@ -13,7 +13,7 @@ const port = process.env.PORT || 8080
 
 app.use(cors( {
     origin: [`${process.env.FRONTEND_URL}`],
-    methods:["POST","GET"],
+    methods:["POST","GET","PUT","DELETE"],
     credenyials:true
   })); 
 
