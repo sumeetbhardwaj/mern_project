@@ -27,6 +27,7 @@ const Products = () => {
         setProducts(response)
       } else if(response?.response?.data?.statusCode === 400){
         setProducts(response?.response?.data);
+       setLoading(true)
       }
     }
     getproductsData()
