@@ -124,7 +124,7 @@ if(!isLoaging){
     <Layout>
         <div className='container min_hieght'>
           <div className="bd-example">
-              <div className="loader">Loading...</div>
+              <div className="loader"></div>
           </div>
         </div>
     </Layout>)
