@@ -12,7 +12,9 @@ const app = express();
 const port = process.env.PORT || 8080
 
 app.use(cors( {
-    origin: `${process.env.FRONTEND_URL}`,
+    origin: [`${process.env.FRONTEND_URL}`],
+    methods:["POST","GET"],
+    credenyials:true
   })); 
 
 app.use(bodyParser.json());
