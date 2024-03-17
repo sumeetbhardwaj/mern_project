@@ -1,0 +1,11 @@
+.error{
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: red;
+  }
+  .min_hieght{
+    min-height: 500px;
+  }
+  .bd-example {
+    margin-top: 50px;
+  }
